@@ -10,6 +10,19 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
+//Answering text
+//localhost:3000/launchx
+app.get('/launchx', (req, res) => {
+    res.send('Welcome to launchX')
+})
+
+//Calling back an object
+//localhost:3000/explorersInNode
+app.get('/explorersInNode', (req,res) => {
+    const explorer = {name: "Explorer", msg: "Hello"}
+    res.send(explorer)
+})
+
 // This starts the app
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
